@@ -94,12 +94,8 @@ export default function Services() {
           {services.map((svc, idx) => {
             const IconComponent = svc.icon;
             return (
-              <motion.div
+              <div
                 key={svc.id}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true, margin: "-100px" }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
                 className={`bg-white border border-black p-6 flex flex-col justify-between transition-all duration-300 hover:shadow-[6px_6px_0px_#111111] hover:-translate-y-1 group relative ${svc.accentColor}`}
               >
                 {/* Structural Grid lines background overlay on hover to simulate engineering charts */}
@@ -153,7 +149,7 @@ export default function Services() {
                   </div>
                 </div>
 
-              </motion.div>
+              </div>
             );
           })}
         </div>

@@ -62,12 +62,8 @@ export default function Testimonials() {
             const starColor = isRedStars ? "text-industrial-red fill-industrial-red" : "text-engineering-blue fill-engineering-blue";
             
             return (
-              <motion.div
+              <div
                 key={test.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.15 }}
                 className="bg-white border border-black p-6 sm:p-8 flex flex-col justify-between hover:shadow-[6px_6px_0px_rgba(0,0,0,0.1)] transition-all duration-300 relative text-left"
               >
                 {/* Visual quote accent in the top corner */}
@@ -99,7 +95,7 @@ export default function Testimonials() {
                   </span>
                 </div>
 
-              </motion.div>
+              </div>
             );
           })}
         </div>

@@ -389,12 +389,8 @@ export default function Blog({ onScrollToSection }: BlogProps) {
           
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {filteredMainPosts.slice(0, visibleCount).map((post, idx) => (
-              <motion.article 
+              <article 
                 key={post.id}
-                initial={{ opacity: 0, y: 15 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.4, delay: idx * 0.05 }}
                 className="border border-black bg-white flex flex-col justify-between hover:shadow-[6px_6px_0px_#D41D1D] group cursor-pointer transition-all duration-300 text-left"
                 onClick={() => setSelectedPost(post)}
               >
@@ -443,7 +439,7 @@ export default function Blog({ onScrollToSection }: BlogProps) {
                   </div>
                 </div>
 
-              </motion.article>
+              </article>
             ))}
           </div>
 

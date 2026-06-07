@@ -83,12 +83,8 @@ export default function Showcase() {
           {projects.map((proj, idx) => {
             const isBlueBorder = idx % 2 === 1;
             return (
-              <motion.div
+              <div
                 key={proj.id}
-                initial={{ opacity: 0, y: 30 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: idx * 0.15 }}
                 className="group cursor-pointer"
                 onClick={() => setSelectedProject(proj)}
               >
@@ -136,7 +132,7 @@ export default function Showcase() {
                     <span>Scope: {proj.scope}</span>
                   </p>
                 </div>
-              </motion.div>
+              </div>
             );
           })}
         </div>

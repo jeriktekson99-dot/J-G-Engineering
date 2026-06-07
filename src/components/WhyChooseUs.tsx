@@ -83,12 +83,8 @@ export default function WhyChooseUs() {
                   : "text-black";
               
               return (
-                <motion.div
+                <div
                   key={pillar.id}
-                  initial={{ opacity: 0, x: 20 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: idx * 0.15 }}
                   className="flex flex-col sm:flex-row gap-6 p-6 border border-gray-200 hover:border-black bg-white transition-all duration-300 text-left relative group hover:shadow-[4px_4px_0px_#111111]"
                 >
                   {/* Large Structural Number Badge */}
@@ -111,7 +107,7 @@ export default function WhyChooseUs() {
                       {pillar.description}
                     </p>
                   </div>
-                </motion.div>
+                </div>
               );
             })}
           </div>

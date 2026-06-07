@@ -81,43 +81,23 @@ export default function Hero({ onGetStarted, onViewProjects }: HeroProps) {
           {/* Left Column (Left Split): Content Block */}
           <div className="w-full lg:w-[55%] flex flex-col text-left">
             
-            <motion.div
-              initial={{ opacity: 0, y: -20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              className="inline-flex items-center gap-2 mb-6 self-start"
-            >
+            <div className="inline-flex items-center gap-2 mb-6 self-start">
               <div className="h-1 w-6 bg-engineering-blue rounded-full" />
               <span className="font-mono text-xs font-bold text-engineering-blue tracking-widest uppercase">
                 PRECISE ENGINEERING. UNCOMPROMISED DELIVERY.
               </span>
-            </motion.div>
+            </div>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.1 }}
-              className="font-display font-extrabold text-[#111111] text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] mb-6 text-left uppercase"
-            >
+            <h1 className="font-display font-extrabold text-[#111111] text-3xl sm:text-4xl lg:text-5xl tracking-tight leading-[1.1] mb-6 text-left uppercase">
               Precision Engineering. <br />
               <span className="text-industrial-red">Zero Guesswork.</span>
-            </motion.h1>
+            </h1>
 
-            <motion.p
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-              className="text-[#4b5563] text-base sm:text-lg leading-relaxed mb-8 font-sans max-w-xl"
-            >
+            <p className="text-[#4b5563] text-base sm:text-lg leading-relaxed mb-8 font-sans max-w-xl">
               We bridge the gap between complex blueprints and flawless execution with disciplined, high-precision structural design and management.
-            </motion.p>
+            </p>
 
-            <motion.div
-              initial={{ opacity: 0, y: 15 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.3 }}
-              className="flex flex-col sm:flex-row gap-4 justify-start items-stretch sm:items-center"
-            >
+            <div className="flex flex-col sm:flex-row gap-4 justify-start items-stretch sm:items-center">
               <button
                 onClick={handleFocusForm}
                 className="bg-industrial-red hover:bg-industrial-red-hover text-white font-display font-bold py-4 px-8 rounded-none transition-all duration-300 transform hover:-translate-y-0.5 active:translate-y-0 text-center shadow-[4px_4px_0px_#111111] active:shadow-[0px_0px_0px_#111111] border-2 border-black cursor-pointer flex items-center justify-center gap-2"
@@ -132,15 +112,10 @@ export default function Hero({ onGetStarted, onViewProjects }: HeroProps) {
               >
                 View Our Projects
               </button>
-            </motion.div>
+            </div>
 
             {/* Quick trust metrics */}
-            <motion.div
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              transition={{ duration: 1, delay: 0.5 }}
-              className="mt-12 pt-8 border-t border-gray-100 grid grid-cols-3 gap-6"
-            >
+            <div className="mt-12 pt-8 border-t border-gray-100 grid grid-cols-3 gap-6">
               <div>
                 <span className="block font-display font-extrabold text-2xl sm:text-3xl text-black">100%</span>
                 <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">Zero-Defect Record</span>
@@ -153,17 +128,12 @@ export default function Hero({ onGetStarted, onViewProjects }: HeroProps) {
                 <span className="block font-display font-extrabold text-2xl sm:text-3xl text-black">20+</span>
                 <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">Completed Projects</span>
               </div>
-            </motion.div>
+            </div>
 
           </div>
 
           {/* Right Column (Right Split): High-Contrast Technical Form Box */}
-          <motion.div 
-            initial={{ opacity: 0, scale: 0.98 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8 }}
-            className="w-full lg:w-[45%] bg-white border-2 border-black p-6 sm:p-8 relative shadow-[8px_8px_0px_#1B49B8] mt-4 lg:mt-0"
-          >
+          <div className="w-full lg:w-[45%] bg-white border-2 border-black p-6 sm:p-8 relative shadow-[8px_8px_0px_#1B49B8] mt-4 lg:mt-0">
             <div className="absolute top-2.5 right-3 text-gray-300 font-mono text-[9px] select-none pointer-events-none">
               JG_VAL_FORM_V26
             </div>
@@ -311,7 +281,7 @@ export default function Hero({ onGetStarted, onViewProjects }: HeroProps) {
                 </p>
               </form>
             )}
-          </motion.div>
+          </div>
 
         </div>
       </div>
