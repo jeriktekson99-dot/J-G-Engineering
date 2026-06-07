@@ -91,12 +91,42 @@ export default function About({ onScrollToSection }: AboutProps) {
 
   // Section 3 Build by Impact Stats
   const stats = [
-    { value: "100%", label: "Safety Compliance Record", accent: "text-industrial-red" },
-    { value: "50+", label: "Engineered Projects Completed", accent: "text-black" },
-    { value: "15+ Years", label: "Combined Engineering Expertise", accent: "text-engineering-blue" },
-    { value: "₱500M+", label: "Managed Project Value", accent: "text-industrial-red" },
-    { value: "0", label: "Structural Delivery Failures", accent: "text-black" },
-    { value: "100k+", label: "Safe Man-Hours Executed", accent: "text-engineering-blue" }
+    { 
+      value: "100%", 
+      label: "Quality Compliance", 
+      desc: "Reflects your strict adherence to the National Building Code, structural engineering safety regulations, and complete customer satisfaction mandates.",
+      accent: "text-industrial-red" 
+    },
+    { 
+      value: "20+", 
+      label: "Completed Projects", 
+      desc: "The exact number of authenticated projects successfully turned over, spanning corporate offices, retail spaces, high-load industrial infrastructures, and luxury residential units.",
+      accent: "text-black" 
+    },
+    { 
+      value: "6 Years", 
+      label: "Industry Experience", 
+      desc: "Aligned with your operational footprint, capturing your strategic market presence and growth timeline in the local construction landscape.",
+      accent: "text-engineering-blue" 
+    },
+    { 
+      value: "₱99M+", 
+      label: "Portfolio Value", 
+      desc: "The actual mathematically combined valuation of your completed works (₱56.5M+) and high-profile ongoing developments like the Balmari Heights Resort (₱43M).",
+      accent: "text-industrial-red" 
+    },
+    { 
+      value: "0", 
+      label: "Structural Failures", 
+      desc: "Derived from your core Quality Policy of absolute transparency, engineering dependability, and zero deviations from verified structural and architectural designs.",
+      accent: "text-black" 
+    },
+    { 
+      value: "130+", 
+      label: "Skilled Personnel", 
+      desc: "Replaces vague man-hours with your exact, formidable workforce team strength (1 General Foreman, 4 Foremen, 20 Carpenters, 25 Masons, 10 Electricians, 5 Plumbers, 20 Painters, 12 Welders, and 30 Helpers).",
+      accent: "text-engineering-blue" 
+    }
   ];
 
   // Section 5 Core Values Stack
@@ -364,12 +394,12 @@ export default function About({ onScrollToSection }: AboutProps) {
               return (
                 <div 
                   key={idx}
-                  className={`p-8 sm:p-10 flex flex-col justify-center items-center text-center bg-white ${borderClass}`}
+                  className={`p-8 sm:p-10 flex flex-col justify-center items-center text-center bg-white min-h-[160px] ${borderClass}`}
                 >
                   <span className={`block font-display font-black text-4xl sm:text-5xl lg:text-6xl tracking-tighter mb-2 ${st.accent}`}>
                     {st.value}
                   </span>
-                  <span className="font-mono text-[10px] text-gray-500 uppercase tracking-widest font-black">
+                  <span className="font-mono text-xs text-[#111111] uppercase tracking-wider font-extrabold">
                     {st.label}
                   </span>
                 </div>
