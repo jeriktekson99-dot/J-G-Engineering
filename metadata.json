@@ -1,0 +1,6 @@
+{
+  "name": "J/G Engineering Services",
+  "description": "Premium industrial & commercial engineering homepage showing structural analysis, project management showcases, testimonials, and consultation booking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
