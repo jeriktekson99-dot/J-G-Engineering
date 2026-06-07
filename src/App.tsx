@@ -4,6 +4,7 @@
  */
 
 import React, { useState } from 'react';
+import { MotionConfig } from 'motion/react';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import ProblemSolution from './components/ProblemSolution';
@@ -64,78 +65,80 @@ export default function App() {
   };
 
   return (
-    <div className="min-h-screen bg-white text-black font-sans antialiased overflow-x-hidden selection:bg-industrial-red selection:text-white">
-      {/* Shared Navigation Bar */}
-      <Navbar 
-        currentView={currentView}
-        setView={setCurrentView}
-        onScrollToSection={handleScrollToSection}
-      />
-      
-      {/* View Content Delivery */}
-      {currentView === 'home' && (
-        <main>
-          {/* Hero Section with interactive CAD mockup */}
-          <Hero 
-            onGetStarted={() => setCurrentView('get-started')}
-            onViewProjects={() => handleScrollToSection('showcase')}
-          />
-          
-          {/* Problem Statement & Solution Statement Splits */}
-          <ProblemSolution />
-          
-          {/* Offered Services Section */}
-          <Services />
-          
-          {/* Project Showcases Section */}
-          <Showcase />
-          
-          {/* Why Choose Us Pillars Section */}
-          <WhyChooseUs />
-          
-          {/* Testimonials Review Card Matrix */}
-          <Testimonials />
-          
-          {/* Clean Estimating & Consultation Form */}
-          <ConsultationForm onScrollToSection={handleScrollToSection} />
-        </main>
-      )}
+    <MotionConfig transition={{ duration: 0 }}>
+      <div className="min-h-screen bg-white text-black font-sans antialiased overflow-x-hidden selection:bg-industrial-red selection:text-white">
+        {/* Shared Navigation Bar */}
+        <Navbar 
+          currentView={currentView}
+          setView={setCurrentView}
+          onScrollToSection={handleScrollToSection}
+        />
+        
+        {/* View Content Delivery */}
+        {currentView === 'home' && (
+          <main>
+            {/* Hero Section with interactive CAD mockup */}
+            <Hero 
+              onGetStarted={() => setCurrentView('get-started')}
+              onViewProjects={() => handleScrollToSection('showcase')}
+            />
+            
+            {/* Problem Statement & Solution Statement Splits */}
+            <ProblemSolution />
+            
+            {/* Offered Services Section */}
+            <Services />
+            
+            {/* Project Showcases Section */}
+            <Showcase />
+            
+            {/* Why Choose Us Pillars Section */}
+            <WhyChooseUs />
+            
+            {/* Testimonials Review Card Matrix */}
+            <Testimonials />
+            
+            {/* Clean Estimating & Consultation Form */}
+            <ConsultationForm onScrollToSection={handleScrollToSection} />
+          </main>
+        )}
 
-      {currentView === 'about' && (
-        <About onScrollToSection={handleScrollToSection} />
-      )}
+        {currentView === 'about' && (
+          <About onScrollToSection={handleScrollToSection} />
+        )}
 
-      {currentView === 'services' && (
-        <ServicesPage onScrollToSection={handleScrollToSection} />
-      )}
+        {currentView === 'services' && (
+          <ServicesPage onScrollToSection={handleScrollToSection} />
+        )}
 
-      {currentView === 'portfolio' && (
-        <PortfolioPage onScrollToSection={handleScrollToSection} />
-      )}
+        {currentView === 'portfolio' && (
+          <PortfolioPage onScrollToSection={handleScrollToSection} />
+        )}
 
-      {currentView === 'blog' && (
-        <Blog onScrollToSection={handleScrollToSection} />
-      )}
+        {currentView === 'blog' && (
+          <Blog onScrollToSection={handleScrollToSection} />
+        )}
 
-      {currentView === 'get-started' && (
-        <GetStartedPage onScrollToSection={handleScrollToSection} />
-      )}
+        {currentView === 'get-started' && (
+          <GetStartedPage onScrollToSection={handleScrollToSection} />
+        )}
 
-      {currentView === 'privacy-policy' && (
-        <PrivacyPolicy onScrollToSection={handleScrollToSection} />
-      )}
+        {currentView === 'privacy-policy' && (
+          <PrivacyPolicy onScrollToSection={handleScrollToSection} />
+        )}
 
-      {currentView === 'terms-of-use' && (
-        <TermsOfUse onScrollToSection={handleScrollToSection} />
-      )}
+        {currentView === 'terms-of-use' && (
+          <TermsOfUse onScrollToSection={handleScrollToSection} />
+        )}
 
-      {currentView === 'safety-compliance' && (
-        <SafetyCompliance onScrollToSection={handleScrollToSection} />
-      )}
-      
-      {/* Shared Structurally Verified Footer */}
-      <Footer setView={setCurrentView} onScrollToSection={handleScrollToSection} />
-    </div>
+        {currentView === 'safety-compliance' && (
+          <SafetyCompliance onScrollToSection={handleScrollToSection} />
+        )}
+        
+        {/* Shared Structurally Verified Footer */}
+        <Footer setView={setCurrentView} onScrollToSection={handleScrollToSection} />
+      </div>
+    </MotionConfig>
   );
 }
 
