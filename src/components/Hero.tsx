@@ -146,12 +146,12 @@ export default function Hero({ onGetStarted, onViewProjects }: HeroProps) {
                 <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">Zero-Defect Record</span>
               </div>
               <div>
-                <span className="block font-display font-extrabold text-2xl sm:text-3xl text-black">15+</span>
-                <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">Licensed Engineers</span>
+                <span className="block font-display font-extrabold text-2xl sm:text-3xl text-black">130+</span>
+                <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">Licensed Workers</span>
               </div>
               <div>
-                <span className="block font-display font-extrabold text-2xl sm:text-3xl text-black">2026</span>
-                <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">Future Ready Tech</span>
+                <span className="block font-display font-extrabold text-2xl sm:text-3xl text-black">20+</span>
+                <span className="text-xs font-mono text-gray-500 uppercase tracking-wider">Completed Projects</span>
               </div>
             </motion.div>
 
